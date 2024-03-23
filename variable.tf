@@ -92,3 +92,41 @@ variable "operator_email" {
   description   = "a valid email address"
   type          = string
 }
+
+# auto scaling group variables
+variable "launch_template_name" {
+  default       = "dev-launch-templage"
+  description   = "name of the launch template"
+  type          = string
+}
+
+variable "ec2_image_id" {
+  default       = "ami-08effc512d87a17c3"
+  description   = "id of the ami"
+  type          = string
+}
+
+variable "ec2_instance_type" {
+  default       = "t2.micro"
+  description   = "ec2 instance type"
+  type          = string
+}
+
+variable "ec2_key_pair_name" {
+  default       = "claudekey33"
+  description   = "name of the ec2 key pair"
+  type          = string
+}
+
+# route 53 variables
+variable "domain_name" {
+  default       = "contriciavet.com"
+  description   = "domain name"
+  type          = string
+}
+
+variable "record_name" {
+  default       = "www"
+  description   = "sub domain name"
+  type          = string
+}
