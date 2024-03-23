@@ -95,7 +95,7 @@ variable "operator_email" {
 
 # auto scaling group variables
 variable "launch_template_name" {
-  default       = "dev-launch-templage"
+  default       = "dev-launch-template"
   description   = "name of the launch template"
   type          = string
 }
