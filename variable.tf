@@ -49,7 +49,7 @@ variable "private_data_subnet_az2_cidr" {
 
 # security group variable
 variable "ssh_location" {
-  default       = "0.0.0.0/0" # the bastion host ip address is placed here
+  default       = "185.111.175.183" # the bastion host ip address is placed here
   description   = "the ip address that can ssh into the ec2 instances"
   type          = string
 }
@@ -68,7 +68,7 @@ variable "database_instance_class" {
 }
 
 variable "database_instance_identifier" {
-  default       = "dev-rds-db"
+  default       = "myrds"
   description   = "the database instance identifier"
   type          = string
 }
