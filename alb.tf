@@ -2,7 +2,7 @@
 # terraform aws create application load balancer
 resource "aws_lb" "application_load_balancer" {
   name               = "dev-alb"
-  internal           = false
+  internal           = false # If this is 'true', then you ALB becomes internal facing
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb_security_group.id]
 
@@ -14,7 +14,7 @@ resource "aws_lb" "application_load_balancer" {
     subnet_id = aws_subnet.public_subnet_az2.id
   }
 
-  enable_deletion_protection = false
+  enable_deletion_protection = false  # For best practice, this should be set to 'true' in a real production environment
 
   tags   = {
     Name = "dev-alb"
