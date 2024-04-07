@@ -1,6 +1,6 @@
 # Authenticate Terraform with AWS by configuring the AWS Provider
 provider "aws" {
-  region = "us-west-1"
+  region = "us-east-2"
   profile = "terraform-user"
 }
 
